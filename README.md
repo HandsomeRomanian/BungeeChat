@@ -1,5 +1,5 @@
 # **Cross Chat 1**
-Looking for the download link? [**Click here**](https://github.com/HandsomeRomanian/CrossChat/releases/download/1.0.0/CrossChat-1.0.0.zip)
+Looking for the download link? [**Click here**](https://github.com/Handsomeromanian/CrossChat/releases/latest)
 
 Bungee Chat is extremely simple chatting plugin. It's a simple way to let players communicate across bungee linked servers without having to configure anything. Just drag an drop the jars in the plugin folder!<br>
 
@@ -14,5 +14,5 @@ Project Code and feature/issues can be found on the GitHub repo ([Right Here!](h
 3. Restart both servers.
 
 ## RoadMap:
-1. Add configuration for symbol between username and chat message.
-2. Admins can toggle global chat.
+ 1. ~~Add configuration for symbol between username and chat message.~~
+ 2. Admins can toggle global chat.
