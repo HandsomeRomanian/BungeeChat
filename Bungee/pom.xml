@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ca.mateimartin</groupId>
-    <artifactId>CrossChat</artifactId>
-    <version>1.0-RELEASE</version>
+    <artifactId>CrossChatBungee</artifactId>
+    <version>1.0.0</version>
 
     <repositories>
         <repository>

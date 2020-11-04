@@ -23,7 +23,6 @@ public class CrossChatSpigot extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         this.getServer().getMessenger().registerOutgoingPluginChannel(this, "message:sent");
-//        this.getServer().getMessenger().registerIncomingPluginChannel(this, "message:sent", this);
         Bukkit.getServer().getPluginManager().registerEvents(this, this);
     }
     @Override
@@ -36,15 +35,6 @@ public class CrossChatSpigot extends JavaPlugin implements Listener {
         event.getPlayer().sendPluginMessage(JavaPlugin.getPlugin(CrossChatSpigot.class),"message:sent",info.getPluginMessage());
         event.setCancelled(true);
     }
-//
-//    @Override
-//    public void onPluginMessageReceived(String channel, Player player, byte[] message) {
-//        if (!channel.equals("message:sent")) {
-//            return;
-//        }
-//        ByteArrayDataInput in = ByteStreams.newDataInput(message);
-//        String playername = in.readUTF();
-//        String chatmessage = in.readUTF();
-//
-//    }
+
+
 }
