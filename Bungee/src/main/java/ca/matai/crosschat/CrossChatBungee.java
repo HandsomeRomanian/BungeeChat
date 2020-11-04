@@ -1,5 +1,6 @@
 package ca.matai.crosschat;
 
+import ca.matai.crosschat.commands.CommandManager;
 import ca.matai.crosschat.listeners.MessageListener;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.plugin.Plugin;
@@ -26,11 +27,12 @@ public class CrossChatBungee extends Plugin  {
             configuration = getConfig();
         } catch (Exception e) {
             getProxy().getLogger().log(Level.SEVERE,
-                    ChatColor.BLUE+"[CrossChat]"+ChatColor.RED+" Configuration file could not be loaded, using default config.");
+                    ChatColor.AQUA+"[CrossChat]"+ChatColor.RED+" Configuration file could not be loaded, using default config.");
         }
-
-        getProxy().registerChannel( "message:sent" );
+        getProxy().registerChannel( getConfigurationValue("communicationChannel"));
         getProxy().getPluginManager().registerListener(this,new MessageListener());
+
+        this.getProxy().getPluginManager().registerCommand(this,new CommandManager());
     }
 
     /**
@@ -38,21 +40,21 @@ public class CrossChatBungee extends Plugin  {
      * @return Return the Configuration object generated from the config file in your plugins folder.
      * @throws IOException Error thrown if config.yml could not be read.
      */
-    private Configuration getConfig() throws IOException {
+    private static Configuration getConfig() throws IOException {
         Configuration configuration;
-        if (!getDataFolder().exists()){
-            getDataFolder().mkdir();
-        File file = new File(getDataFolder(), "config.yml");
+        if (! instance.getDataFolder().exists()){
+            instance.getDataFolder().mkdir();
+        File file = new File(instance.getDataFolder(), "config.yml");
             if (!file.exists()) {
-                try (InputStream in = getResourceAsStream("config.yml")) {
+                try (InputStream in = instance.getResourceAsStream("config.yml")) {
                     Files.copy(in, file.toPath());
                 } catch (Exception e) {
-                    getProxy().getLogger().log(Level.SEVERE,
+                    instance.getProxy().getLogger().log(Level.SEVERE,
                             ChatColor.RED+"[CrossChat]"+"getConfig readfile");
                 }
             }
         }
-        configuration = ConfigurationProvider.getProvider(YamlConfiguration.class).load(new File(getDataFolder(), "config.yml"));
+        configuration = ConfigurationProvider.getProvider(YamlConfiguration.class).load(new File(instance.getDataFolder(), "config.yml"));
         return configuration;
     }
 
@@ -73,24 +75,6 @@ public class CrossChatBungee extends Plugin  {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-//        if (getDefaultConfig().getKeys() == configuration.getKeys()){ //Keys are the same but content might be empty.
-//            boolean diff = false;
-//            for (String key : input.getKeys()){
-//                if (input.get(key) == null || !input.get(key).equals("")) {
-//                    input.set(key, getDefaultConfig().get(key));
-//                    diff = true;
-//                }
-//            }
-//            try {
-//                ConfigurationProvider.getProvider(YamlConfiguration.class).save(configuration, new File(getDataFolder(), "config.yml"));
-//            } catch (Exception e) {
-//                getProxy().getLogger().log(Level.WARNING,
-//                        ChatColor.BLUE+"[CrossChat]"+ChatColor.RED+" Configuration file could not be saved after Configuration Validation.");
-//                getProxy().getLogger().log(Level.CONFIG,e.getMessage());
-//            }
-//        }
-//        return input;
 
     }
 
@@ -117,9 +101,9 @@ public class CrossChatBungee extends Plugin  {
         Configuration configuration = new Configuration();
 
         configuration.set("separator"," → ");
+        configuration.set("communicationChannel","crosschat:message");
 
         return configuration;
     }
-
 
 }

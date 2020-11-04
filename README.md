@@ -16,3 +16,4 @@ Project Code and feature/issues can be found on the GitHub repo ([Right Here!](h
 ## RoadMap:
  1. ~~Add configuration for symbol between username and chat message.~~
  2. Admins can toggle global chat.
+ 3. Add option to display server user is chating from.
