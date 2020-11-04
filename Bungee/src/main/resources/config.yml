@@ -1,1 +1,10 @@
 separator: " → "
+
+
+
+#=================================================================================
+# Advanced Section. Don't touch this if you don't know what you are doing.
+# Trust me you might end up without chat or other functions on all your servers.
+#=================================================================================
+
+communicationChannel: "CrossChat:Message"
