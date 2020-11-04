@@ -1,6 +1,6 @@
 name: CrossChat
-version: 1.0.0
-description: Plugin to chat across multiple Bungee/Waterfall servers.
+version: 1.1.0
+description: Receiver plugin to chat across multiple Bungee/Waterfall servers.
 
 
 author: _Matai_
