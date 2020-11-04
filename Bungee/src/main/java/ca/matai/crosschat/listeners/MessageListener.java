@@ -11,7 +11,7 @@ import net.md_5.bungee.event.EventHandler;
 public class listener implements Listener {
 
     @EventHandler
-    public void test(PluginMessageEvent event){
+    public void PluginMessageListener(PluginMessageEvent event){
         if (event.getTag().equalsIgnoreCase("message:sent")){
             ByteArrayDataInput in = ByteStreams.newDataInput(event.getData());
             String playername = in.readUTF();
