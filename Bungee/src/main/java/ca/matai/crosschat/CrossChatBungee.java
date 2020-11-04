@@ -101,7 +101,7 @@ public class CrossChatBungee extends Plugin  {
         Configuration configuration = new Configuration();
 
         configuration.set("separator"," → ");
-        configuration.set("communicationChannel","CrossChat:Message");
+        configuration.set("communicationChannel","crosschat:message");
 
         return configuration;
     }

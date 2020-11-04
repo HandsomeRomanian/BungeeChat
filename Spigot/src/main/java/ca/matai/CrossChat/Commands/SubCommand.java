@@ -7,7 +7,7 @@ public abstract class SubCommand {
 
     public Boolean permissionCheck(Player p){
         if(!p.hasPermission(getPermission())){
-            p.sendMessage(ChatColor.YELLOW + "[" + ChatColor.AQUA + "CrossChat" + ChatColor.YELLOW + "]" + ChatColor.RED + "You do not have the permission to use this command!");
+            p.sendMessage(ChatColor.AQUA+"[CrossChat]" + ChatColor.RED + "You do not have the permission to use this command!");
             return false;
         }
         return true;

@@ -51,7 +51,7 @@ public class CommandManager implements TabExecutor {
     }
 
     public void helpMessage(Player p) {
-        p.sendMessage(ChatColor.YELLOW + "" + ChatColor.AQUA + "@Player" + ChatColor.YELLOW + "]");
+        p.sendMessage(ChatColor.AQUA+"[CrossChat]");
         p.sendMessage(ChatColor.AQUA + "Version: " + JavaPlugin.getPlugin(CrossChatSpigot.class).getDescription().getVersion());
         p.sendMessage(ChatColor.AQUA + "Available commands: ");
         getSubCommands().forEach(x -> p.sendMessage(ChatColor.AQUA + x.getSyntax()));

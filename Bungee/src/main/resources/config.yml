@@ -7,4 +7,4 @@ separator: " → "
 # Trust me you might end up without chat or other functions on all your servers.
 #=================================================================================
 
-communicationChannel: "CrossChat:Message"
+communicationChannel: "crosschat:message"
