@@ -3,7 +3,7 @@ Looking for the download link? [**Click here**](https://github.com/Handsomeroman
 
 Bungee Chat is extremely simple chatting plugin. It's a simple way to let players communicate across bungee linked servers without having to configure anything. Just drag an drop the jars in the plugin folder!<br>
 
-This project was originally started by [ArgExceptionNull](https://github.com/NullExceptionArg/GlobalChat) under GlobalChat last year and has been fully rewriten with his help.<br>
+This project was originally started by [ArgNullException](https://github.com/NullExceptionArg/GlobalChat) under GlobalChat last year and has been fully rewriten with his help.<br>
 
 Project Code and feature/issues can be found on the GitHub repo ([Right Here!](https://github.com/HandsomeRomanian/CrossChat)).
 
