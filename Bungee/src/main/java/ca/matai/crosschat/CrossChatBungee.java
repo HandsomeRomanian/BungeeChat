@@ -1,6 +1,7 @@
 package ca.matai.crosschat;
 
 import ca.matai.crosschat.commands.CommandManager;
+import ca.matai.crosschat.commands.Message;
 import ca.matai.crosschat.listeners.MessageListener;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.plugin.Plugin;
@@ -33,6 +34,7 @@ public class CrossChatBungee extends Plugin  {
         getProxy().getPluginManager().registerListener(this,new MessageListener());
 
         this.getProxy().getPluginManager().registerCommand(this,new CommandManager());
+        this.getProxy().getPluginManager().registerCommand(this,new Message());
     }
 
     /**

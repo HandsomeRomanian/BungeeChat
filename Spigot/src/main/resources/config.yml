@@ -1,5 +1,6 @@
-settingplaceholder: "Hello World!"
 
+#Layout of the players's name before his message (only works if you have PlaceHolderAPI).
+namedisplay: "%townyadvanced_towny_tag_override% %player_displayname%"
 
 
 

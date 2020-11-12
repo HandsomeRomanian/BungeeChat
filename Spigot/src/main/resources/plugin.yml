@@ -1,7 +1,7 @@
 name: CrossChat
 version: 1.2.0
 description: Sender plugin to chat across multiple Bungee/Waterfall servers.
-
+softdepend: [PlaceholderAPI]
 author: _Matai_
 # website: http://forums.bukkit.org/threads/MyPlugin.31337/
 
